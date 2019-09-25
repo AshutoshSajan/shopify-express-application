@@ -10,7 +10,15 @@ const request = require('request-promise');
 const apiKey = process.env.SHOPIFY_API_KEY;
 const apiSecret = process.env.SHOPIFY_API_SECRET;
 const scopes = 'read_products';
-const forwardingAddress = "https://b3059c1a.ngrok.io"; // Replace this with your HTTPS Forwarding address
+// Forwarding HTTP traffic from https://node-react-app.serveo.net                        │
+
+// ngrok forwarding HTTPS Forwarding address
+//change after every restart
+// const forwardingAddress = "https://b3059c1a.ngrok.io"; // Replace this with your HTTPS Forwarding address
+
+// servio forwarding HTTPS Forwarding address
+//remains same
+const forwardingAddress = "https://node-react-app.serveo.net"; // Replace this with your HTTPS Forwarding address
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
